@@ -1,3 +1,8 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
 :root {
   --background: #ffffff;
   --foreground: #171717;
@@ -16,13 +21,24 @@ body {
   overflow-x: hidden;
 }
 
+html{
+  scroll-behavior: smooth;
+}
+
 body {
+  @apply bg-white text-gray-900 dark:bg-secondary dark:text-gray-100 min-h-screen;
+    margin: 0; /* 기본 margin 제거 */
+    padding: 0; /* 기본 padding 제거 */
+    display: flex; /* 컨텐츠를 중앙 정렬할 수 있도록 flex 사용 */
+    flex-direction: column; /* 컨텐츠가 세로로 정렬되도록 설정 */
+  /* 
   color: var(--foreground);
   background: var(--background);
   font-family: Arial, Helvetica, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-}
+  */
+} 
 
 * {
   box-sizing: border-box;
